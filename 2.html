@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Pandilla Mantequilla</title>
+    <link rel="stylesheet" href="vista.css" type="text/css">
+</head>
+<body>
+  <p class="result" style="color:green"></p>
+
+  <section> 
+
+    <div class="reloj">
+    <div class="contenedor">
+      <h2 id="horas1">00</h2>
+      <h2 class="punto">:</h2>
+      <h2 id="minutos1">01</h2>
+      </div></div>
+        
+        
+    <div class="reloj2">
+    <div class="contenedor">
+       <h2 id="horas2">00</h2>
+       <h2 class="punto">:</h2>
+       <h2 id="minutos2">00</h2>
+       </div></div>
+
+    <div class="reloj3">
+    <div class="contenedor">
+      <h2 id="horas3">00</h2>
+      <h2 class="punto">:</h2>
+      <h2 id="minutos3">00</h2>
+      </div></div>
+
+           
+
+    <div class="reloj4">
+    <div class="contenedor">
+      <h2 id="horas4">00</h2>
+      <h2 class="punto">:</h2>
+      <h2 id="minutos4">00</h2>
+      </div></div>
+
+    <div class="reloj5">
+    <div class="contenedor">
+      <h2 id="horas5">00</h2>
+      <h2 class="punto">:</h2>
+      <h2 id="minutos5">00</h2>
+      </div></div>
+                        
+    <div class="reloj6">
+    <div class="contenedor">
+      <h2 id="horas6">00</h2>
+      <h2 class="punto">:</h2>
+      <h2 id="minutos6">00</h2>
+      </div></div>
+    
+      <div class=cont_boton>
+        <button class="boton" onclick="reloj('berkeley')"><span>Berkeley</span></button>
+        <button class="boton" onclick="reloj('cristian')"><span>Cristian</span></button>
+      </div>
+  
+  </section>
+  <script>
+     function reloj(alg){
+      var reloj1 = {};
+      reloj1.horas = document.getElementById('horas1');
+      reloj1.minutos = document.getElementById('minutos1');
+      let h = new Date().getHours();
+      let m = new Date().getMinutes();
+      reloj1.horas.innerHTML=h;
+      reloj1.minutos.innerHTML=m;
+    reloj1.horas = document.getElementById('horas1').innerHTML;
+    reloj1.minutos = document.getElementById('minutos1').innerHTML;
+    var reloj2 = {};
+    reloj2.horas = document.getElementById('horas2').innerHTML;
+    reloj2.minutos = document.getElementById('minutos2').innerHTML;
+    var reloj3 = {};
+    reloj3.horas = document.getElementById('horas3').innerHTML;
+    reloj3.minutos = document.getElementById('minutos3').innerHTML;
+    var reloj4 = {};
+    reloj4.horas = document.getElementById('horas4').innerHTML;
+    reloj4.minutos = document.getElementById('minutos4').innerHTML;
+    var reloj5 = {};
+    reloj5.horas = document.getElementById('horas5').innerHTML;
+    reloj5.minutos = document.getElementById('minutos5').innerHTML;
+    var reloj6 = {};
+    reloj6.horas = document.getElementById('horas6').innerHTML;
+    reloj6.minutos = document.getElementById('minutos6').innerHTML;
+    var data=JSON.stringify(
+      {
+        "maestro":
+        {
+          "reloj":reloj1
+        },
+        "esclavos":[
+          {
+            "reloj":reloj2
+          },
+          {
+            "reloj":reloj3
+          },
+          {
+            "reloj":reloj4
+          },
+          {
+            "reloj":reloj5
+          },
+          {
+            "reloj":reloj6
+          }
+        ],
+        "sync":alg
+      }
+      );
+      sendJSON(data);
+
+  }
+  function sendJSON(data){
+              
+                  alert(data);
+               // Creating a XHR object
+               let xhr = new XMLHttpRequest();
+               let url = "submit.php";
+           
+               // open a connection
+               xhr.open("POST", url, true);
+     
+               // Set the request header i.e. which type of content you are sending
+               xhr.setRequestHeader("Content-Type", "application/json");
+     
+               // Create a state change callback
+               xhr.onreadystatechange = function () {
+                   if (xhr.readyState === 4 && xhr.status === 200) {
+     
+                       // Print received data from server
+                       result.innerHTML = this.responseText;
+     
+                   }
+               };
+     
+               // Converting JSON data to string
+     
+               // Sending data with the request
+               xhr.send(data);
+           }
+  </script>
+
+</body>
+    </html>
+
+    <!--horas.innerHTML=h;-->
+      <!--minutos.innerHTML=m;-->

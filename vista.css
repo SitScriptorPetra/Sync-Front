@@ -1,0 +1,341 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: consolas;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #19172e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before
+{
+ content: '';
+ position: absolute;
+ top: 10%;
+ right: 20%;
+ width: 300px;
+ height: 300px;
+ border-radius: 10px;
+ background: linear-gradient(#f9d924,#ff2c24);
+ animation: animate 5s ease-in-out infinite;
+}
+
+section::after
+{
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  background: linear-gradient(#01d6ff,#0f24f9);
+  animation: animate 5s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
+@keyframes animate 
+{
+    0%,100%
+    {
+        transform: translateY(20px);
+    }
+    50%
+    {
+        transform: translateY(-20px);
+    }
+          
+}
+
+.reloj 
+{
+    position: relative;
+    width: 900px;
+    height: 150px;
+    top: -35%;
+    left: 43%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.reloj2 
+{
+    position: relative;
+    width: 900px;
+    height: 150px;
+    top: -11%;
+    left: -5%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.reloj3 
+{
+    position: relative;
+    width: 900px;
+    height: 150px;
+    top: -11%;
+    left: 10%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.reloj4 
+{
+    position: relative;
+    width: 900px;
+    height: 150px;
+    top: -11%;
+    right: -25%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.reloj5 
+{
+    position: relative;
+    width: 900px;
+    height: 150px;
+    bottom: -25%;
+    left: -40%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.reloj6 
+{
+    position: relative;
+    width: 900px;
+    height: 150px;
+    bottom: -25%;
+    right: 25%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+}
+
+.reloj  .contenedor
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.reloj2  .contenedor
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.reloj3  .contenedor
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.reloj4  .contenedor
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.reloj5  .contenedor
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.reloj6  .contenedor
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.reloj  .contenedor h2
+{
+    font-size: 3em;
+    color: white;
+}
+
+.reloj  .contenedor h2:nth-child(odd)
+{
+   padding: 5px 15px;
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.05);
+   box-shadow:  0 15px 25px rgba(255, 255, 255, 0.2);
+   margin: 0 10px;
+   border-bottom:1px solid rgba(255, 255, 255, 0.1) ;
+   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reloj2  .contenedor h2
+{
+    font-size: 3em;
+    color: white;
+}
+
+.reloj2  .contenedor h2:nth-child(odd)
+{
+   padding: 5px 15px;
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.05);
+   box-shadow:  0 15px 25px rgba(255, 255, 255, 0.2);
+   margin: 0 10px;
+   border-bottom:1px solid rgba(255, 255, 255, 0.1) ;
+   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.reloj3  .contenedor h2
+{
+    font-size: 3em;
+    color: white;
+}
+
+.reloj3  .contenedor h2:nth-child(odd)
+{
+   padding: 5px 15px;
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.05);
+   box-shadow:  0 15px 25px rgba(255, 255, 255, 0.2);
+   margin: 0 10px;
+   border-bottom:1px solid rgba(255, 255, 255, 0.1) ;
+   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.reloj4  .contenedor h2
+{
+    font-size: 3em;
+    color: white;
+}
+
+.reloj4  .contenedor h2:nth-child(odd)
+{
+   padding: 5px 15px;
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.05);
+   box-shadow:  0 15px 25px rgba(255, 255, 255, 0.2);
+   margin: 0 10px;
+   border-bottom:1px solid rgba(255, 255, 255, 0.1) ;
+   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.reloj5  .contenedor h2
+{
+    font-size: 3em;
+    color: white;
+}
+
+.reloj5  .contenedor h2:nth-child(odd)
+{
+   padding: 5px 15px;
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.05);
+   box-shadow:  0 15px 25px rgba(255, 255, 255, 0.2);
+   margin: 0 10px;
+   border-bottom:1px solid rgba(255, 255, 255, 0.1) ;
+   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.reloj6  .contenedor h2
+{
+    font-size: 3em;
+    color: white;
+}
+
+.reloj6  .contenedor h2:nth-child(odd)
+{
+   padding: 5px 15px;
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 0.05);
+   box-shadow:  0 15px 25px rgba(255, 255, 255, 0.2);
+   margin: 0 10px;
+   border-bottom:1px solid rgba(255, 255, 255, 0.1) ;
+   border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cont_boton {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+
+.boton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80px;
+	background: #141414;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.boton::after {
+	content: "";
+	width: 100%;
+	height: 300px;
+	background:linear-gradient(#f9d924,#ff2c24);
+	position: absolute;
+	z-index: 1;
+	top: -300px;
+	left: 0;
+	transition: .4s ease-in-out all;
+	border-radius: 0px 0px 300px 300px;
+}
+
+.boton:hover::after {
+	top: 0;
+}
